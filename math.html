@@ -76,6 +76,29 @@
       window.location.href = "https://1drv.ms/b/s!Aqs8zmvnhY2MgUzr9UTxtzSot0IM?e=4OeMgL";
       }
 </script>
+     <script>
+    // Disable Right-Click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'Shift')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J'))
+      ) {
+        e.preventDefault();
+        alert("Developer tools are disabled!");
+      }
+    });
+
+    // Additional Check for DevTools Detection
+    (function detectDevTools() {
+      const devtools = /./;
+      devtools.toString = function() { return 'DevTools Detected'; };
+      console.log('%c', devtools);
+    })();
+  </script>
  <h2> ☯︎"If you have any problem in downloading any file then visit my bot on telegram you will get your pdf there" </h2>
  <div class="buttons">
         <button class="btn" id="BOT" onclick="nextPage13()">BOT LINK</button>
