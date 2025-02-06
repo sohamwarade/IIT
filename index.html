@@ -43,6 +43,29 @@
             window.location.href = "https://t.me/SCIENCE_WALLA_BOT";
           }
       </script>
+               <script>
+    // Disable Right-Click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'Shift')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J'))
+      ) {
+        e.preventDefault();
+        alert("Developer tools are disabled!");
+      }
+    });
+
+    // Additional Check for DevTools Detection
+    (function detectDevTools() {
+      const devtools = /./;
+      devtools.toString = function() { return 'DevTools Detected'; };
+      console.log('%c', devtools);
+    })();
+  </script>
      <section class="main-content">
         <h2>About Me</h2>
         <p>hii!!</p>
