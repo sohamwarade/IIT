@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Narayana Material</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+   .flip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  /* Make it fill the screen vertically */
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 220px; /* ⬅️ Increased width */
+  height: 140px; /* ⬅️ Increased height */
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  font-weight: 700;
+  font-size: 20px; /* ⬅️ Bigger font */
+  text-align: center;
+  padding: 10px;
+}
+
+.flip-card-front {
+  background-color: #292929;
+  color: #ffb627;
+  box-shadow: 0 4px 15px rgba(255, 182, 39, 0.2);
+}
+
+.flip-card-back {
+  background-color: #ff6b35;
+  color: #1c1c1c;
+  transform: rotateY(180deg);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+}
+
+.btn {
+  background-color: #1c1c1c;
+  color: #ffb627;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffb627;
+  color: #1c1c1c;
+  box-shadow: 0 0 10px #ffb627;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+      <img src="Screenshot_2024-03-08_at_8.44.18_PM-removebg-preview.png" class="logo">
+    <h1 class="main-heading">📚Narayana Modules</h1>
+  </header>
+
+  <section>
+    <p class="subtext">Hover over a card to access the module.</p>
+
+    <div class="flip-container">
+
+      <!-- Physics -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            ⚛️ Physics
+          </div>
+          <div class="flip-card-back">
+            <button class="btn" onclick="window.location.href='https://drive.google.com/drive/folders/1NjN9HTl177JfXS6CuhLX-0VWdjDGzs4I?usp=drive_link'">Download</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chemistry -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            🧪 Chemistry
+          </div>
+          <div class="flip-card-back">
+            <button class="btn" onclick="window.location.href='https://drive.google.com/drive/folders/1DD4IAdGguwEw4ZYTFENGghVasuIqHAsx?usp=drive_link'">Download</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maths -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            ➗ Maths
+          </div>
+          <div class="flip-card-back">
+            <button class="btn" onclick="window.location.href='https://1drv.ms/f/c/8c8d85e76bce3cab/Ep664jgLkWtDtHJepM0-yFYBFkvQ27Aab50TdPP_0vcecg?e=HuI5WT'">Download</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+                             <script>
+    // Disable Right-Click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'Shift')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J'))
+      ) {
+        e.preventDefault();
+        alert("Developer tools are disabled!");
+      }
+    });
+
+    // Additional Check for DevTools Detection
+    (function detectDevTools() {
+      const devtools = /./;
+      devtools.toString = function() { return 'DevTools Detected'; };
+      console.log('%c', devtools);
+    })();
+  </script>
+
+    <!-- Back Button -->
+    <div class="back-btn">
+      <button class="btn" onclick="window.location.href='index.html'">⬅️ Back to Home</button>
+    </div>
+  </section>
+</body>
+</html>
