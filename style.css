@@ -1,115 +1,134 @@
-/* Reset CSS */* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Basic styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height:2;
-    background-color: #f7f7f7;
-    color: #000000;
-    margin: px;
-    padding: px;
-    text-align:center;
-}
-
-header {
-    position:;
-    background-color: #5a4bda;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    left:00px;
-    right:0
-}
-
-nav ul {
-    list-style-type: auto;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: dotted;
-}
-
-.main-content {
-    padding: 20px;
-}
-
-footer {
-    background-color: #5a4bda;
-    color: #fff;
-    text-align: center;
-
-
-    position: fixed;
-
-    bottom: 0;
-    left: 0px;
-    right: 0px;
-
-    padding: 10px;
-
-}
-body {
-      background: linear-gradient( rgb(107 112 112),rgb(255 249 250), rgb(97 92 92));
-      height: 900px;
-}
-button {
-
-    background-color: #5a4bda;
-    color:antiquewhite;
-
-    border: none;
-
-  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1c1c1c;
+  color: #f5f5f5;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 2px 2px;
-  }
+  line-height: 1.6;
+  padding-bottom: 100px;
+}
 
+/* Header */
+header {
+  background-color: #292929;
+  padding: 20px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(255, 107, 53, 0.15);
+}
 
-
-
-
-
-
+header h1 {
+  font-size: 2rem;
+  color: #ff6b35;
+  margin-top: 10px;
+}
 
 .logo {
-position: absolute;
-top:2px;
-    left:10px;
-    width:100px;
-    top:10px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 70px;
+  height: auto;
+  z-index: 1001;
 }
+
+/* Section Titles */
+h2, h3 {
+  margin: 30px 0 10px;
+  color: #ffb627;
+  font-weight: 600;
+}
+
+/* Buttons */
+button.btn {
+  background-color: #ff6b35;
+  color: #1c1c1c;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #ffb627;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 107, 53, 0.3);
+}
+
+/* About Section */
+.main-content {
+  background-color: #292929;
+  border-radius: 14px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.1);
+}
+
+/* Telegram Note */
 h2 {
-
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-family: fantasy;
-    unicode-bidi: isolate;
+  font-size: 14px;
+  font-style: italic;
+  margin: 30px auto 20px;
+  max-width: 600px;
+  font-weight: 400;
+  color: #dddddd;
 }
 
-/* Default styles */
-body {
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
+/* Footer */
+footer {
+  background-color: #292929;
+  color: #bbb;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: 0 -2px 10px rgba(255, 107, 53, 0.1);
 }
 
-.container {
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .logo {
+    width: 50px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    padding-left: 70px;
+  }
+
+  .main-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button.btn {
     width: 80%;
-    margin: 0 auto;
+    font-size: 15px;
+  }
+}
+/* Orange styling for all links */
+a {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffb627; /* yellow-orange on hover */
+  text-decoration: underline;
 }
